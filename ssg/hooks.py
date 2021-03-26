@@ -16,5 +16,5 @@ def filter(hook, value, *args):
     for order in sorted(_callbacks.get(hook, {})):
         for func in _callbacks[hook][order]:
             value = func(value, *args)
-
+    return value
 
